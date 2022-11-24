@@ -23,10 +23,13 @@ public class MainPageTest {
 
     @BeforeEach
     public void setUp() {
-        open("https://www.jetbrains.com/");
+        open("http://localhost:3000/");
     }
 
-    @Test
+
+}
+
+/*@Test
     public void search() {
         mainPage.searchButton.click();
 
@@ -49,6 +52,5 @@ public class MainPageTest {
 
         $("#products-page").shouldBe(visible);
 
-        assertEquals("All Developer Tools and Products by JetBrains", Selenide.title());
-    }
-}
+        assertEquals("AppCode", Selenide.title());
+    }*/
