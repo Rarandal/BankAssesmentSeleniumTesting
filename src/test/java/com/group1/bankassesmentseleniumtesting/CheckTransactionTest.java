@@ -18,7 +18,8 @@ public class CheckTransactionTest {
 	public static void checkTransactionTest() {
 		
 		open("/dataEntry");
-		$("button[data-test='data-entry']");
+		$("button[data-test='data-entry']").click();
+		assertEquals("http://localhost:3000/user/settings",WebDriverRunner.getWebDriver().getCurrentUrl());
 		
 		
 	}
