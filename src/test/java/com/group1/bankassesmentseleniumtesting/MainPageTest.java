@@ -2,6 +2,7 @@ package com.group1.bankassesmentseleniumtesting;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
+import com.codeborne.selenide.WebDriverRunner;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.*;
@@ -26,10 +27,18 @@ public class MainPageTest {
         open("http://localhost:3000/");
     }
 
+    @Test
+    public void loginTest(){
+        $("button[data-test='Sign in']").click();
 
-}
+        $("[data-test='username-input']").sendKeys("solera@solera.com");
+        $("[data-test='password-input']").sendKeys("bootcamp4");
 
-/*@Test
+        $("button[data-test='Login']").click();
+
+        assertEquals("http://localhost:3000/userAccount", WebDriverRunner.getWebDriver().getCurrentUrl());
+    }
+    /*@Test
     public void search() {
         mainPage.searchButton.click();
 
@@ -54,3 +63,6 @@ public class MainPageTest {
 
         assertEquals("AppCode", Selenide.title());
     }*/
+
+}
+

@@ -9,6 +9,7 @@ import static com.codeborne.selenide.Selenide.$x;
 public class MainPage {
 
 }
-/*public SelenideElement seeAllToolsButton = $("a.wt-button_mode_primary");
+/*
+    public SelenideElement seeAllToolsButton = $("a.wt-button_mode_primary");
     public SelenideElement toolsMenu = $x("//div[@data-test='main-menu-item' and @data-test-marker = 'Developer Tools']");
-    public SelenideElement searchButton = $("[data-test='site-header-search-action']");*/
+    */
