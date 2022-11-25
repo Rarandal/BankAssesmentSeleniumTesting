@@ -5,7 +5,7 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class BankAccountTest {
 	
-	public void bankAccountTest() {
+	public static void bankAccountTest() {
 		open("/BankAccount");
 		$("button[data-test='Create-Account']");
 		$("button[data-test='Delete-Account']");
