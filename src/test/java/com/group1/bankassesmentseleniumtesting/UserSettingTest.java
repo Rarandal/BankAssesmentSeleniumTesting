@@ -12,11 +12,17 @@ public class UserSettingTest {
 
         $("button[data-test='Login']").click();
 
-        $("[data-test='my_account_button']").click();
+        $("[data-test='user-sidebar']").click();
 
-        $("[data-test='first-name']").sendKeys("Solera");
-        $("[data-test='email']").sendKeys("solera@solera.com");
-        $("[data-test='phoneNumber']").sendKeys("000-000-0000");
+        try {
+            Thread.sleep(1500);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        $("[data-test='primero']").sendKeys("Solera");
+        $("[data-test='segundo']").sendKeys("a");
+        $("[data-test='tercero']").sendKeys("solera@solera.com");
+        $("[data-test='cuarto']").sendKeys("000-000-0000");
 
         $("button[data-test='save']").click();
     }
