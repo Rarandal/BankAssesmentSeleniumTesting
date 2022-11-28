@@ -18,6 +18,8 @@ public class RegisterTest {
 
         $("button[data-test='Register']").click();
 
-        assertEquals("http://localhost:3000/userAccount", WebDriverRunner.getWebDriver().getCurrentUrl());
+        $("[data-test='home-label']");
+
+
     }
 }
